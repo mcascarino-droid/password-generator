@@ -40,10 +40,17 @@
  
  </body>
  <script>
-    function generation() {
-      
-      return "mots de passe ramdom"
-    }
+    function generatePassword() {
+            var password = "";
+            var possible =
+                "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()*+,-./:;<=>?@[]^_`{|}~";
+            for (var i = 0; i < 15; i++) {
+                password += possible.charAt(
+                    Math.floor(Math.random() * possible.length),
+                );
+            }
+            return password;
+        }
    
   const button = document.getElementById("password-genere");
    const input = document.getElementById("password-input");
@@ -53,7 +60,7 @@
 
     button.addEventListener("click", () => {
       console.log("click")
-      input.value =  generation()
+      input.value =  generatePassword()
       
     
     
