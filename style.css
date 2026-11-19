@@ -130,7 +130,7 @@ body {
   width: 90px;
   height: 40px;
   padding: 10px;
-  text-align: right;
+  text-align: right -10px;
   border: none;
   background: rgb(221, 213, 213);
   border-radius: 8px;
