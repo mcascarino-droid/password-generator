@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="container-input">
-          <input name="password" class="input-password"  placeholder="en attente du clic" type="password">
+          <input id="password-input" name="password" class="input-password"  placeholder="en attente du clic" type="text">
         </div>
         <div class="container-copie">
           <div class="div-copie">
@@ -38,7 +38,34 @@
     </div>
   </div>
  
-</body>
+ </body>
+ <script>
+    function generation() {
+      
+      return "mots de passe ramdom"
+    }
+   
+  const button = document.getElementById("password-genere");
+   const input = document.getElementById("password-input");
+
+   console.log(input)
+   
+
+    button.addEventListener("click", () => {
+      console.log("click")
+      input.value =  generation()
+      
+    
+    
+
+    });
+
+
+    
+
+
+ 
+  </script>
 </html>
 
 
